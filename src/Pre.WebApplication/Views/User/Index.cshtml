@@ -1,1 +1,20 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@using Pre.WebApplication.Models
+
+
+<h1>Users</h1>
+
+@foreach (User currentUserFromList in Model.userList)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => currentUserFromList.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => currentUserFromList.age)
+            </td>
+
+        </tr>
+    }

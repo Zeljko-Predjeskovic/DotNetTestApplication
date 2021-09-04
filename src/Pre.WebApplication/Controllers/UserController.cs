@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pre.WebApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Pre.WebApplication.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new UserList());
         }
     }
 }

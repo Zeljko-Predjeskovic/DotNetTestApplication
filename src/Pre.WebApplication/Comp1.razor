@@ -1,11 +1,28 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
+@using Pre.WebApplication.Models
+
 
 <h3>NavBarComponent</h3>
 
 <input @bind="message" @bind:event="oninput">
 <p>message: @message</p>
 
+<h1>Users</h1>
+
+@foreach (User currentUserFromList in new UserList().userList)
+{
+    <tr>
+        <td>
+           @currentUserFromList.Name
+        </td>
+        <td>
+            @currentUserFromList.age
+        </td>
+
+    </tr>
+}
 
 @code {
     string message;
+
 }
